@@ -1,0 +1,67 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+
+
+}
+
+.logo{
+    img{
+        width: 100px;
+    }
+}
+
+.search-bar{
+ width: 500px;
+    display: flex;
+
+    input{
+        width:100%;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        box-shadow: 0px 1px 5px rgb(0,0,0,0.25);
+        border-radius: 20px;
+        margin: 1.2rem 1.2rem;
+        
+        &:focus{
+            outline: none;
+            border-color: #333;
+        }
+
+
+    }
+}
+
+.icons{
+    display: flex;
+    gap:1rem;
+
+    .icon, .users, .cart{
+        border: none;
+        background: white;
+        padding: 0.5rem;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.75;
+        }
+    }
+
+    img{
+        height: 24px;
+        width: 24px;
+    }
+
+
+}
+
+@media (max-width: 568px) {
+    
+.search-bar{
+    width:180px;
+}
+}
