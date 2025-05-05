@@ -1,1 +1,9 @@
-<p>posters works!</p>
+<div class="poster-wrapper">
+    <div class="poster-track">
+        <div class="poster-tile" *ngFor = "let poster of posters">
+            <img [src]="poster.imageUrl" [alt]="poster.posterName">
+            <div class="poster-name">{{poster.posterName}}</div>
+        </div>
+    </div>
+</div>
+<p>works</p>
