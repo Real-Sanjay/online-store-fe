@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc(20% - 16px);
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

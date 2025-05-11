@@ -1,9 +1,21 @@
 <div class="poster-wrapper">
-    <div class="poster-track">
-        <div class="poster-tile" *ngFor = "let poster of posters">
-            <img [src]="poster.imageUrl" [alt]="poster.posterName">
-            <div class="poster-name">{{poster.posterName}}</div>
+    <div class="poster-track" [ngStyle]="{
+        backgroundColor: backgroundColors[currentIndex % backgroundColors.length]
+      }">
+        <button class="nav-arrow left" (click)="previousSlide()">
+            &lt;</button>
+        <div class="poster-tile" *ngFor="let poster of posters; let i = index">
+            <div class="poster-content">
+                <img [src]="poster.imageUrl" [alt]="poster.posterName"
+                    [ngStyle]="{opacity: currentIndex === i ? '1' : '0'}" class="image-slider">
+                <div class="poster-name" [ngStyle]="{opacity: currentIndex === i ? '1' : '0'}">{{poster.posterName}}
+                </div>
+            </div>
         </div>
+        <button class="nav-arrow right" (click)="nextSlide()">&gt;</button>
+    </div>
+    <div class="navigation-buttons">
+        <span class="dot" *ngFor="let poster  of posters; let i = index" [class.active]="currentIndex === i"
+            (click)="changeSlide(i)"></span>
     </div>
 </div>
-<p>works</p>

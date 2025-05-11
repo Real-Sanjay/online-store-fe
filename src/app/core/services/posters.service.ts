@@ -11,4 +11,8 @@ export class PostersService {
   getAllPosters() : Observable<any>{
     return this.http.get(`${this.apiUrl}/posters`);
   }
+
+  getAllProducts(): Observable<any>{
+    return this.http.get(`${this.apiUrl}/products`)
+  }
 }

@@ -1,1 +1,19 @@
-<p>categories works!</p>
+<!-- <div class="container">
+    <div class="tile" *ngFor="let cati of categories">
+        <div class="img" >
+            <img [src]="cati.image" alt="img">
+        </div>
+        <div class="title">
+            {{cati.name}}
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+  <a class="cat-container" href="/">
+    <div class="cat-item" *ngFor="let category of categories">
+      <img [src]="category.image" alt="img" />
+      <span class="cat-name">{{ category.name }}</span>
+    </div>
+  </a>
+</div>
